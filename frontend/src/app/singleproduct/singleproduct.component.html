@@ -1,0 +1,11 @@
+<div class="card">
+    <img src={{stock.image}} alt="Denim Jeans" style="width:100%">
+    <h1>{{stock.product_name}}</h1>
+    <p class="price">{{cart.total_price}} &#8377;</p>
+    <p>{{stock.product_desc}}</p>
+    <p><button class="qty" (click)=increase()><i class="fas fa-plus"></i></button>
+      <input readonly style="width: 40px;" value={{cart.total_qty}}>
+      <button class="qty" (click)=decrease()><i class="fas fa-minus"></i></button></p>
+    <p><button class="cart-btn" (click)="additem()">Add to Cart</button></p>
+    <p><button (click)="back()">Back</button></p>
+  </div>

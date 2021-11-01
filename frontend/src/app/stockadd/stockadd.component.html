@@ -1,0 +1,36 @@
+
+<div class="container">
+    <h1>Add Stock</h1>
+  <form (ngSubmit)="addstock()" #userSignup="ngForm" >
+
+      <div class="form-group col-md-8">
+        <label for="fname">product name :</label>
+        <input type="text" class="form-control" name="product_name" id="fname" [(ngModel)]="stock.product_name" placeholder="product name" required>
+      </div>
+      <div class="form-group col-md-8">
+        <label for="lname"> product Description:</label>
+        <textarea class="form-control"  name="product_desc" id="lname" [(ngModel)]="stock.product_desc" placeholder="product Description" required></textarea>
+      </div>
+ 
+   
+    
+      <div class="row">
+        <div class="form-group col-md-4">
+          <label for="inputusername"> quantity</label>
+          <input type="number" class="form-control" name=" quantity"  [(ngModel)]="stock.quantity" id="username" placeholder="quantity" required>
+        </div>
+      <div class="form-group col-md-4">
+        <label for="inputPassword4">Price unit:</label>
+        <input type="number" class="form-control" name="price_unit" id="inputPassword4" [(ngModel)]="stock.price_unit" placeholder="price_unit" required>
+      </div>
+   
+      <div class="form-group col-md-8">
+        <label for="lname"> Image Url:</label>
+        <input type="text" class="form-control"  name="product_desc" id="lname" [(ngModel)]="stock.image" placeholder="product Description" required>
+      </div>
+  </div>
+  <br>
+  
+    <button type="submit" class="btn btn-success btn-outline-light" >Add</button>
+  </form>
+  </div>

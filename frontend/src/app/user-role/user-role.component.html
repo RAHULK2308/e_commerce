@@ -1,0 +1,29 @@
+<div class="container container-fluid">
+    <h2> User Role Managment</h2>
+  
+  <table class="table table-bordered ">
+      <thead>
+        <tr>
+          <th >id</th>
+          <th > Roles</th>
+          <th > User</th>
+          <th >Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let userRole of userRoles">
+        <tr>
+          
+          <td></td>
+          <td>{{userRole.role_id}}</td>
+          <td>{{userRole.user_id}}</td>
+          <td ><button (click)="editrole(userRole)">Edit</button></td>
+          <td ><button (click)="delete(userRole)">Delete</button></td>
+        </tr>
+    
+      </tbody>
+    </table>
+  <button routerLink="/userroleadd" 
+  class="col-md-2 btn-info btn-outline-dark">
+  User Role Add</button>
+  </div>

@@ -1,0 +1,30 @@
+<div class="container"><h1>Add User-Role</h1>
+    <form (ngSubmit)="update()">
+        <div class="form-group row col-md-8">
+          <label for="role" class="col-sm-2 col-form-label">Role</label>
+          <div class="col-sm-10">
+            <ng-multiselect-dropdown name="selectedItems"
+            [placeholder]="'Select Role'"
+            [settings]="dropdownSettings"
+            [data]="dropdownList"
+            [(ngModel)]="selectedItems"
+            (onSelect)="onItemSelect($event)"
+            (onSelectAll)="onSelectAll($event)" >
+          </ng-multiselect-dropdown>
+          </div>
+        </div>
+        <div class="form-group row col-md-8">
+          <label for="inputPassword" class="col-sm-2 col-form-label">User Name</label>
+          <ng-select [(ngModel)]="userRole.user_id" name="userRole">
+            <ng-option *ngFor="let user of users" [value]="user.username">{{user.username}}</ng-option>
+         </ng-select>
+          <div class="col-sm-10">
+          </div> </div>
+        <br>
+    <span id=error></span><br>
+      <button type="submit" class="btn btn-success btn-outline-light col-md-1">Update</button>
+      <br>
+     
+      </form>
+      <br>
+    </div>

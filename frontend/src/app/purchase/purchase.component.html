@@ -1,0 +1,42 @@
+
+<div class="container container-fluid">
+    <h2>Purchase Managment</h2>
+  <br>
+<div class="search-product">
+<form>
+  <div class="form-group ">
+    <label for="search-product">Search Product:</label>
+    <input class="form-control col-md-6" type="text" name="query" [(ngModel)]="query">
+  </div>
+  <br>
+  <div class="form-label" *ngIf="query">
+    search: {{query}}
+  </div>
+</form>
+</div>
+  <table class="table table-bordered ">
+      <thead>
+        <tr>
+       
+          <th > image </th>
+          <th > product name </th>
+          <th >  product Description</th>
+          
+         <th></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let stock of Stock|searchProduct:query">
+        <tr>
+                      
+          <td ><img src={{stock.image}} alt={{stock.product_name}} width="60px"></td>
+          <td>{{stock.product_name}}</td>
+          <td>{{stock.product_desc}}</td>
+         
+      
+          <td><button (click)="view(stock)">View Product</button></td>
+        </tr>
+       
+      </tbody>
+    </table>
+
+  </div>

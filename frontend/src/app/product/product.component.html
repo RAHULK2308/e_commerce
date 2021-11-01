@@ -1,0 +1,49 @@
+
+<div class="container container-fluid">
+    <h2>Product Managment</h2>
+  <br>
+<div class="search-product">
+<form>
+  <div class="form-group ">
+    <label for="search-product">Search Product:</label>
+    <input class="form-control col-md-6" type="text" name="query" [(ngModel)]="query">
+  </div>
+  <br>
+  <div class="form-label" *ngIf="query">
+    search: {{query}}
+  </div>
+</form>
+</div>
+  <table class="table table-bordered ">
+      <thead>
+        <tr>
+          <th >id</th>
+          <th > image </th>
+          <th > product name </th>
+          <th >  product Description</th>
+          <th > price unit  </th>
+          <th >  quantity</th>
+          <th >Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let stock of Stock|searchProduct:query">
+        <tr>
+          
+          <td></td>
+          <td><img src={{stock.image}} alt={{stock.product_name}} width="60px"></td>
+          <td>{{stock.product_name}}</td>
+          <td>{{stock.product_desc}}</td>
+          <td>{{stock.price_unit}}</td>
+          <td>{{stock.quantity}}</td>
+          <td ><button (click)="edit(stock)">Edit</button></td>
+          <td ><button (click)="delete(stock)">Delete</button></td>
+        </tr>
+       
+      </tbody>
+    </table>
+   
+  <button routerLink="/stockadd" class="col-md-2 btn-info btn-outline-dark">Stock Add</button>
+  </div>
+
+  

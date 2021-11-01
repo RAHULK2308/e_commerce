@@ -1,0 +1,38 @@
+
+<div class="container container-fluid">
+    <h2>Cart</h2>
+  <br>
+
+
+  <table class="table table-bordered ">
+      <thead>
+        <tr>
+          <th></th>
+          <th >stock_id</th>
+        <th>Product Name</th>
+          <th >  total_qty </th>
+          <th > total_price </th>
+        
+          <th></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let cart of carts">
+        <tr>
+          <td><img src="{{cart.image}}" width="60px"  alt=""></td>
+          <td>{{cart.stock_id}}</td>
+          <td>{{cart.product_name}}</td>
+          <td>{{cart.total_qty}}</td>
+          <td>{{cart.total_price}}</td>
+         
+          <td><button (click)=purchase(cart)>purchase</button></td>
+          <td><button (click)=delete(cart)>Remove</button></td>
+        </tr>
+       
+      </tbody>
+    </table>
+   
+  <button routerLink="/purchase" class="col-md-2 btn-info btn-outline-dark">back</button>
+    <button (click)=purchaseAll() >purchase all</button>
+</div>
+
+  

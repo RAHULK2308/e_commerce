@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+.navbar-nav {
+    margin-left: auto;
+    font-weight: 300;
+    font-family: 'PT Serif','Times New Roman', Times, serif;
+    
+}
+
+sup{
+    color:white;
+    background-color: red;
+    border-radius: 50%;
+    width: 100%;
+}
+
+
+
+.navbar-brand{
+    font-style: italic;
+    font-family: 'Lobster',fantasy;
+}

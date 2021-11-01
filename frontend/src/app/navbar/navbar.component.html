@@ -1,0 +1,51 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">E Cart Shopping Site</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse  navbar-collapse " id="navbarNav" >
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="login" *ngIf="!auth.AdminloggedIn() && !auth.UserLoggedIn()">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="signup" *ngIf="!auth.AdminloggedIn() && !auth.UserLoggedIn()">SignUp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="role" *ngIf="auth.AdminloggedIn()">Roles</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="product" *ngIf="auth.AdminloggedIn()">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="purchase"  *ngIf="auth.AdminloggedIn() || auth.UserLoggedIn()">Purchase</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="user" *ngIf="auth.AdminloggedIn()">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="userRole" *ngIf="auth.AdminloggedIn()" >User Roles</a>
+          </li>
+          <li class="nav-item">
+           
+            <a class="nav-link active" routerLink="cart"  *ngIf=" auth.UserLoggedIn()">
+              <i class="fas fa-cart-plus"></i>
+             </a> 
+           
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="order"  *ngIf="auth.AdminloggedIn() || auth.UserLoggedIn()">Orders</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link active" style="cursor: pointer;" *ngIf="auth.AdminloggedIn() || auth.UserLoggedIn()" (click)="logoutUser()">Logout</a>
+       
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

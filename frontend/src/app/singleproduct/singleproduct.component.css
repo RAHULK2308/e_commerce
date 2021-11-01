@@ -1,0 +1,38 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    color: #000;
+    margin-top: 50px;
+
+  }
+  
+  .card img{
+     max-height: 280px;
+  }
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card .cart-btn {
+    border: none;
+    outline: 0;
+    padding: 10px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+ .qty{
+   margin-left: 4px;
+   margin-right: 4px;
+ }
+  .card .cart-btn:hover {
+    opacity: 0.7;
+  }

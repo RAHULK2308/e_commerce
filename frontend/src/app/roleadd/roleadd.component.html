@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Add Role</h1>
+  <form (ngSubmit)="roleAdd()">
+      <div class="form-group row col-md-8">
+        <label for="role" class="col-sm-2 col-form-label">Role</label>
+        <div class="col-sm-10">
+          <input type="text"  class="form-control" id="Role" name="role" [(ngModel)]="roles.name">
+        </div>
+      </div>
+      <br>
+      <div class="form-group row col-md-8">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Role Description</label>
+        <div class="col-sm-10">
+          <textarea type="text" class="form-control" id="Role_desc" name="desc"  [(ngModel)]="roles.desc"> </textarea>
+        </div>  
+      </div>
+      <br>
+  <span id=error></span>
+  <br>
+    <button type="submit" class="btn btn-success btn-outline-light col-md-1">ADD</button>
+    <br>
+   
+    </form>
+    <br>
+  </div>

@@ -1,0 +1,21 @@
+.product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 500px;
+    background-color: #333;
+    border-radius: 21px;
+    transform: rotate(30deg);
+    border: #333 solid 1px;
+  }
+
+  .fw-normal{
+      color: #333;
+  }
+
+  .product{
+    margin-top: 10px;   
+   margin-left: 40px;   
+  }
+ 
